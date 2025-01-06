@@ -1,0 +1,179 @@
+databaseChangeLog:
+  - changeSet:
+        id: 1
+        author: Y. Orlov
+        changes:
+          - insert:
+              tableName: access_level
+              columns:
+                - column:
+                    name: access_level_id
+                    valueNumeric: 1
+                - column:
+                    name: level_name
+                    value: Сотрудник банка
+  - changeSet:
+      id: 2
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: access_level
+            columns:
+              - column:
+                  name: access_level_id
+                  valueNumeric: 2
+              - column:
+                  name: level_name
+                  value: Руководитель отделения
+  - changeSet:
+      id: 3
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: access_level
+            columns:
+              - column:
+                  name: access_level_id
+                  valueNumeric: 3
+              - column:
+                  name: level_name
+                  value: СуперЮзер
+  - changeSet:
+      id: 4
+      author: Ilnaz G.
+      changes:
+        - insert:
+            tableName: employee_status
+            columns:
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 1
+              - column:
+                  name: status_name
+                  value: Активен
+  - changeSet:
+      id: 5
+      author: Ilnaz G.
+      changes:
+        - insert:
+            tableName: employee_status
+            columns:
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 2
+              - column:
+                  name: status_name
+                  value: Заблокирован
+  - changeSet:
+      id: 6
+      author: Ilnaz G.
+      changes:
+        - insert:
+            tableName: employee_status
+            columns:
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 3
+              - column:
+                  name: status_name
+                  value: Уволен
+  - changeSet:
+      id: 7
+      author: Kokhno Anton
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: anna.smirnova@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 550e8400-e29b-41d4-a716-446655440000
+              - column:
+                  name: password
+                  value: $2a$09$XQWORdH5lefEjv4WSapB1e22Wtobg8LCa6Bg9fq4D3t8ZMGJKUTjO
+              - column:
+                  name: access_level_id
+                  valueNumeric: 2
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 1
+              - column:
+                  name: is_temporary_password
+                  valueBoolean: false
+  - changeSet:
+      id: 8
+      author: Kokhno Anton
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: ivan.ivanov@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 350e8400-e29b-41d4-a716-446655441000
+              - column:
+                  name: password
+                  value: $2a$09$tj11DAe2xhRITAT/OOw8ie72b6Sszg46V8t60T5knVNYQXv02u33y
+              - column:
+                  name: access_level_id
+                  valueNumeric: 1
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 1
+              - column:
+                  name: is_temporary_password
+                  valueBoolean: false
+  - changeSet:
+      id: 9
+      author: Kokhno Anton
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: alexey.kuznetsov@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 450e8400-e29b-41d4-a716-446655440000
+              - column:
+                  name: password
+                  value: $2a$09$GSokVF0/L8KThE.rArketeSCxhqLwxtB49qicCtAP4HA69ZSCrSa2
+              - column:
+                  name: access_level_id
+                  valueNumeric: 3
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 1
+              - column:
+                  name: is_temporary_password
+                  valueBoolean: false
+  - changeSet:
+      id: 10
+      author: Kokhno Anton
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: ivan.kuznetsov@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 450e8400-e29b-41d4-a716-446655440001
+              - column:
+                  name: password
+                  value: $2a$12$/C2vc7ccA70rtdlw3VRnoOMJ7HxFbE.4ZnsDvKRrN3OcvGYiA6mJS
+              - column:
+                  name: access_level_id
+                  valueNumeric: 3
+              - column:
+                  name: employee_status_id
+                  valueNumeric: 2
+              - column:
+                  name: is_temporary_password
+                  valueBoolean: false

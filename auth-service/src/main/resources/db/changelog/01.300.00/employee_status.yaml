@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: createEmployeeStatusTable
+      author: Ilnaz G.
+      preConditions:
+        - onFail: CONTINUE
+        - not:
+            - tableExists:
+                tableName: employee_status
+
+      changes:
+        - createTable:
+            tableName: employee_status
+            columns:
+              - column:
+                  name: employee_status_id
+                  type: INTEGER
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+                    checkConstraint: "employee_status_id IN (1, 2, 3)"
+              - column:
+                  name: status_name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false

@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authservice
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  data:
+      redis:
+        host: localhost
+        port: 6379
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop

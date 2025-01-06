@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+  namespace: dev
+data:
+  # Полный application.yaml
+  application.yaml: |
+    spring:
+      cache:
+        type: redis
+        cache-names: jwtCache
+        redis:
+          time-to-live: 300000
+      mail:
+        username: email_username
+      data:
+        redis:
+          host: redis-master
+          port: 6379
+      application:
+        name: authservice
+      profiles:
+        active: dev
+
+    jwt:
+      secret: $2a$09$mk2pVckrnm0t80Pu4vsa6eEcy9Jm6DvGUNAJC1E/TMiO7QBoZZk/y
+      access:
+        token:
+          expiration: 300000
+      refresh:
+        token:
+          expiration: 86400000
+
+  # Переменные из idea.env
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-dev.postgresql:5432/authservice"
+  SPRING_DATASOURCE_USERNAME: "authserv"
+  SPRING_DATASOURCE_PASSWORD: "authserv"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "validate"
+  SPRING_DATA_REDIS_HOST: "redis-master"
+  SPRING_DATA_REDIS_PORT: "6379"

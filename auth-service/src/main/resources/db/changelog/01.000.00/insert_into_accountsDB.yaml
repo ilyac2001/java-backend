@@ -1,0 +1,111 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: access_level
+            columns:
+              - column:
+                  name: level_id
+                  valueNumeric: "2"
+              - column:
+                  name: level_name
+                  value: Руководитель отделения
+
+  - changeSet:
+      id: 2
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: anna.smirnova@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 550e8400-e29b-41d4-a716-446655440000
+              - column:
+                  name: password
+                  value: $2a$09$XQWORdH5lefEjv4WSapB1e22Wtobg8LCa6Bg9fq4D3t8ZMGJKUTjO
+              - column:
+                  name: access_level_id
+                  valueNumeric: "2"
+              - column:
+                  name: is_blocked
+                  value: "false"
+
+  - changeSet:
+      id: 3
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: access_level
+            columns:
+              - column:
+                  name: level_id
+                  valueNumeric: "1"
+              - column:
+                  name: level_name
+                  value: Сотрудник банка
+
+  - changeSet:
+      id: 4
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: ivan.ivanov@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 350e8400-e29b-41d4-a716-446655441000
+              - column:
+                  name: password
+                  value: $2a$09$tj11DAe2xhRITAT/OOw8ie72b6Sszg46V8t60T5knVNYQXv02u33y
+              - column:
+                  name: access_level_id
+                  valueNumeric: "1"
+              - column:
+                  name: is_blocked
+                  value: "false"
+
+  - changeSet:
+      id: 5
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: access_level
+            columns:
+              - column:
+                  name: level_id
+                  valueNumeric: "3"
+              - column:
+                  name: level_name
+                  value: СуперЮзер
+
+  - changeSet:
+      id: 6
+      author: Y. Orlov
+      changes:
+        - insert:
+            tableName: account_credentials
+            columns:
+              - column:
+                  name: work_email
+                  value: alexey.kuznetsov@x-bank.com
+              - column:
+                  name: employee_id
+                  value: 450e8400-e29b-41d4-a716-446655440000
+              - column:
+                  name: password
+                  value: $2a$09$GSokVF0/L8KThE.rArketeSCxhqLwxtB49qicCtAP4HA69ZSCrSa2
+              - column:
+                  name: access_level_id
+                  valueNumeric: "3"
+              - column:
+                  name: is_blocked
+                  value: "false"

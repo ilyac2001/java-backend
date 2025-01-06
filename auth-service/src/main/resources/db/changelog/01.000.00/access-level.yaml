@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: createAccessLevelTable
+      author: Shamil U.
+      preConditions:
+        - onFail: CONTINUE
+        - not:
+            - tableExists:
+                tableName: access_level
+
+      changes:
+        - createTable:
+            tableName: access_level
+            columns:
+              - column:
+                  name: level_id
+                  type: INTEGER
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+                    checkConstraint: "level_id IN (1, 2, 3)"
+              - column:
+                  name: level_name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false
