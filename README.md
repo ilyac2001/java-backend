@@ -4,6 +4,7 @@
 Проект направлен на разработку системы для автоматизации операций банковских работников, которая позволит оптимизировать временные и кадровые ресурсы для выполнения задач, а так же сократит количество ошибок при выполнении операций. Результатом внедрения системы будут финансовые и не финансовые выгоды в виде увеличения доли рынка, повышение удовлетворённости клиентов и прочее. Разрабатываемый сервис позволяет управлять информацией о сотрудниках, клиентах, счетах, филиалах, новостях, а также осуществлять внутреннюю рассылку уведомлений и проводить операции с валютами и картами.
 
 Java - Разработка серверной части приложений на языке Java, включая разработку бэкенда, интеграций и микросервисной архитектуры.
+
 Инструменты: IntelliJ IDEA, Postman, PostgreSQL, Docker, Gradle, JUnit/TestNG.)
-Stack:
-Java 17, Spring Boot, Web, Security, Data JPA, PostgreSQL, Redis, Liquibase, Lombok, Gradle, Docker и Docker Compose, Kafka, GitLab, JUnit, Mockito, Test Container, Swagger.
+
+Stack: Java 17, Spring Boot, Web, Security, Data JPA, PostgreSQL, Redis, Liquibase, Lombok, Gradle, Docker и Docker Compose, Kafka, GitLab, JUnit, Mockito, Test Container, Swagger.
